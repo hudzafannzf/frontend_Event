@@ -2,7 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import Button from "../components/ui/Button";
-import { data, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Forminput from "../components/Forminput";
 
 type FormData = {

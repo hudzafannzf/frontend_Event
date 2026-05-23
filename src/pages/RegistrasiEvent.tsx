@@ -8,18 +8,20 @@ const schema = z.object({
     nama: z.string().min(1, "Nama harus diisi!"),
     alamat: z.string().min(1, "Alamat wajib diisi!"),
     email: z.string().min(1, "Email wajib diisi!"),
-    Bio: z.string().min(1, "Tolong isi Bio")
+    bio: z.string().min(1, "Tolong isi Bio"),
 });
 
 export default function Registrasievent() {
+    type FormValues = z.infer<typeof schema>;
+
     const {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm({ resolver: zodResolver(schema) })
+    } = useForm<FormValues>({ resolver: zodResolver(schema) })
     return (
         <div>
-            <form onSubmit={handleSubmit(console.log())}>
+            <form onSubmit={handleSubmit((values) => console.log(values))}>
                 <Forminput
                     label="Masukan nama"
                     tipe="text"
@@ -52,7 +54,7 @@ export default function Registrasievent() {
                     tipe="text"
                     name="bio"
                     register={register}
-                    error={errors.Bio?.message}
+                    error={errors.bio?.message}
                     placeholder="Email"
                 />
                 <div className="flex justify-center p-5">
