@@ -8,9 +8,9 @@ export default function Saya() {
                 <div className="flex max-w-20 bg-gray-200 justify-center rounded-lg">
                     <User size={50} />
                 </div>
-                <p>saya Dhiyaulhaq fakhri mohammad</p>
+                <p>saya Muhammad Huzaifah Annazif</p>
                 <p>saya adalah mahasiswa dari universitas harkat negeri tegal</p>
-                <p>NIM saya 24090113</p>
+                <p>NIM saya 24090137</p>
             </div>
         </div>
     )
