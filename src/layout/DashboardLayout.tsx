@@ -49,8 +49,13 @@ export default function DashboardLayout() {
                 </div>
 
                 {/* tiga */}
-                <div className="bg-[#4A0F0F] p-4 w-full text-white text-center rounded-lg cursor-pointer hover:bg-[#5A1515] transition">
-                    <button onClick={handleLogout} className="w-full">Logout</button>
+                <div className="p-4 w-full">
+                    <button
+                        onClick={handleLogout}
+                        className="w-full rounded-lg bg-[#4A0F0F] text-[#F5EAEA] py-3 hover:bg-[#5A1515] transition border border-[#5A1515]/50 font-medium"
+                    >
+                        Logout
+                    </button>
                 </div>
             </div>
 

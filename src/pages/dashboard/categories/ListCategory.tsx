@@ -97,7 +97,7 @@ export default function Listcategory() {
 
             {/* Tombol Buat Kategori Baru */}
             <div className="py-5">
-                <div className="flex justify-center p-3 bg-blue-900 max-w-50 rounded-lg text-white hover:bg-blue-800 transition ease-in duration-75 text-center">
+                <div className="flex justify-center p-3 bg-[#2B0505] max-w-50 rounded-lg text-[#F5EAEA] hover:bg-[#4A0F0F] transition ease-in duration-75 text-center border border-[#5A1515]/60">
                     <Link to="/dashboard/category/create" className="w-full">Buat Category baru</Link>
                 </div>
             </div>

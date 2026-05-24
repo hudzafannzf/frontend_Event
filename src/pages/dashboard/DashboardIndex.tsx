@@ -39,8 +39,10 @@ export default function DashboardIndex() {
 
     return (
         <div className="p-5">
-            <h1 className="font-semibold text-2xl mb-1 text-[#2B0505]">Halaman Dashboard</h1>
-            <p className="text-gray-700 mb-6">Selamat datang di halaman dashboard utama kamu.</p>
+            <div className="mb-6">
+                <h1 className="font-semibold text-2xl tracking-tight text-[#3d0000]">Halaman Dashboard</h1>
+                <p className="text-[#000000]/70 mt-1">Ringkasan cepat data kategori, event, dan pembicara.</p>
+            </div>
 
             {loading ? (
                 <p className="text-gray-600 animate-pulse">Memuat data statistik...</p>
@@ -49,21 +51,30 @@ export default function DashboardIndex() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                     
                     {/* Kartu Total Kategori */}
-                    <div className="p-5 bg-[#3B0A0A] border border-[#5A1515]/60 rounded-xl shadow-sm">
-                        <p className="text-sm font-medium text-[#F5EAEA]/90 uppercase tracking-wider">Total Kategori</p>
-                        <p className="text-4xl font-bold text-white mt-2">{totalCategory}</p>
+                    <div className="relative overflow-hidden p-5 bg-gradient-to-b from-[#3B0A0A] to-[#2B0505] border border-[#5A1515]/70 rounded-2xl shadow-sm">
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(245,234,234,0.16),transparent_40%)]" />
+                        <div className="relative">
+                            <p className="text-sm font-medium text-[#F5EAEA]/90 uppercase tracking-wider">Total Kategori</p>
+                            <p className="text-4xl font-bold text-[#F5EAEA] mt-2">{totalCategory}</p>
+                        </div>
                     </div>
 
                     {/* Kartu Total Event */}
-                    <div className="p-5 bg-[#3B0A0A] border border-[#5A1515]/60 rounded-xl shadow-sm">
-                        <p className="text-sm font-medium text-[#F5EAEA]/90 uppercase tracking-wider">Total Event</p>
-                        <p className="text-4xl font-bold text-white mt-2">{totalEvent}</p>
+                    <div className="relative overflow-hidden p-5 bg-gradient-to-b from-[#3B0A0A] to-[#2B0505] border border-[#5A1515]/70 rounded-2xl shadow-sm">
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(245,234,234,0.16),transparent_40%)]" />
+                        <div className="relative">
+                            <p className="text-sm font-medium text-[#F5EAEA]/90 uppercase tracking-wider">Total Event</p>
+                            <p className="text-4xl font-bold text-[#F5EAEA] mt-2">{totalEvent}</p>
+                        </div>
                     </div>
 
                     {/* Kartu Total Speakers */}
-                    <div className="p-5 bg-[#3B0A0A] border border-[#5A1515]/60 rounded-xl shadow-sm">
-                        <p className="text-sm font-medium text-[#F5EAEA]/90 uppercase tracking-wider">Total Speakers</p>
-                        <p className="text-4xl font-bold text-white mt-2">{totalSpeaker}</p>
+                    <div className="relative overflow-hidden p-5 bg-gradient-to-b from-[#3B0A0A] to-[#2B0505] border border-[#5A1515]/70 rounded-2xl shadow-sm">
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(245,234,234,0.16),transparent_40%)]" />
+                        <div className="relative">
+                            <p className="text-sm font-medium text-[#F5EAEA]/90 uppercase tracking-wider">Total Speakers</p>
+                            <p className="text-4xl font-bold text-[#F5EAEA] mt-2">{totalSpeaker}</p>
+                        </div>
                     </div>
 
                 </div>
