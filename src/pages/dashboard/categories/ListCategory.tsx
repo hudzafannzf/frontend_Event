@@ -9,7 +9,7 @@ interface CategoryType {
 }
 
 export default function Listcategory() {
-    const apiUrl = import.meta.env.VITE_API_URL;
+    const apiUrl = import.meta.env.VITE_API_URL?.replace(/\/+$/, "");
     const [categories, setCategories] = useState<CategoryType[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
 
