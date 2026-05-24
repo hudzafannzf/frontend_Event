@@ -6,7 +6,7 @@ interface CategoryOption { id: number; name: string; }
 interface SpeakerOption { id: number; name: string; role: string; }
 
 export default function EditEvent() {
-    const apiUrl = import.meta.env.VITE_API_URL;
+    const apiUrl = import.meta.env.VITE_API_URL?.replace(/\/+$/, "");
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
 

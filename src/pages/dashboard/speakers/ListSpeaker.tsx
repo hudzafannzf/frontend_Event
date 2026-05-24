@@ -11,7 +11,7 @@ interface SpeakerType {
 }
 
 export default function Listspeaker() {
-    const apiUrl = import.meta.env.VITE_API_URL;
+    const apiUrl = import.meta.env.VITE_API_URL?.replace(/\/+$/, "");
     const [speakers, setSpeakers] = useState<SpeakerType[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
 

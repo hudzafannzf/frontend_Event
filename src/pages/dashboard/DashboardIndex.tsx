@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function DashboardIndex() {
-    const apiUrl = import.meta.env.VITE_API_URL;
+    const apiUrl = import.meta.env.VITE_API_URL?.replace(/\/+$/, "");
     // 1. Siapkan state untuk menampung jumlah total data
     const [totalCategory, setTotalCategory] = useState(0);
     const [totalEvent, setTotalEvent] = useState(0);

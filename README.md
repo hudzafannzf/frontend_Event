@@ -1,5 +1,5 @@
 penerapan endpoint biodata di /saya
-link deploy vercel : [@link]()
+link deploy vercel : [https://frontend-event-sand.vercel.app/]
 
 
 # React + TypeScript + Vite

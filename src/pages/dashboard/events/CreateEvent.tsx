@@ -29,7 +29,7 @@ const schema = z.object({
 });
 
 export default function CreateEvent() {
-    const apiUrl = import.meta.env.VITE_API_URL;
+    const apiUrl = import.meta.env.VITE_API_URL?.replace(/\/+$/, "");
     const navigate = useNavigate();
     const [isSubmitting, setIsSubmitting] = useState(false);
 
